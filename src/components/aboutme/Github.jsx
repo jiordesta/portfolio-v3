@@ -7,20 +7,29 @@ export default function Github() {
         <h1 className="text-base font-bold bg-white bg-opacity-5 p-4">
           You can also visit my Github repository.
         </h1>
-        <div
-          className="flex cursor-pointer"
-          onClick={() =>
-            window.open(
-              "https://github.com/jiordesta",
-              "_blank",
-              "noopener,noreferrer"
-            )
-          }
-        >
-          <div className="p-4 bg-white bg-opacity-5 rounded-s-lg">
+        <div className="flex ">
+          <div
+            className="p-4 bg-white bg-opacity-5 rounded-s-lg cursor-pointer"
+            onClick={() =>
+              window.open(
+                "https://github.com/jiordesta",
+                "_blank",
+                "noopener,noreferrer"
+              )
+            }
+          >
             <img src="/icons/github.svg" width={75} height={75} alt="" />
           </div>
-          <div className="flex justify-center items-center bg-white bg-opacity-5 p-4 rounded-e-lg">
+          <div
+            className="flex justify-center items-center bg-white bg-opacity-5 p-4 rounded-e-lg cursor-pointer"
+            onClick={() =>
+              window.open(
+                "https://github.com/jiordesta",
+                "_blank",
+                "noopener,noreferrer"
+              )
+            }
+          >
             <button className="underline">open in new tab</button>
           </div>
         </div>

@@ -86,7 +86,7 @@ export default function Aboutme() {
         ) : section === "github" ? (
           <Github />
         ) : (
-          <Notfound />
+          <Hero />
         )}
       </div>
       <ul className="flex justify-center items-end gap-2 w-full">

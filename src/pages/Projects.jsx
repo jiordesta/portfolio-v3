@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate, useOutlet, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import ProjectPreviews from "../components/ProjectPreviews";
 
 export default function Projects() {
@@ -16,7 +16,7 @@ export default function Projects() {
         "Vite",
         "Firebase",
       ],
-      link: "test.com/heheh/kikiki/sksksksks",
+      link: "https://resaykel-client.onrender.com/",
       images: [
         "/images/resaykel/1.PNG",
         "/images/resaykel/2.PNG",

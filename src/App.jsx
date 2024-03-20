@@ -18,7 +18,6 @@ export default function App() {
           <Route path="/projects" Component={Projects} />
           <Route path="/projects/show/:name" Component={Projects} />
           <Route path="/contacts" Component={Contacts} />
-          <Route path="*" Component={Notfound} />
         </Routes>
       </Router>
     </div>

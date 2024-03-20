@@ -1,0 +1,70 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@layer components {
+  .no-scroll {
+    @apply overflow-hidden;
+  }
+  :root {
+    @apply bg-color1;
+  }
+
+  .burger-menu {
+    @apply flex flex-col;
+  }
+  .burger-menu.active {
+    @apply transition-transform duration-300 ease-in-out;
+  }
+  .burger-menu .bar:nth-child(1) {
+    @apply transform rotate-0 transition-transform ease-in-out duration-500;
+  }
+  .burger-menu .bar:nth-child(2) {
+    @apply opacity-100 transition-opacity ease-in-out duration-300;
+  }
+  .burger-menu .bar:nth-child(3) {
+    @apply transform -rotate-0 transition-transform ease-in-out duration-500;
+  }
+  .burger-menu.active .bar:nth-child(1) {
+    @apply transform rotate-45 translate-x-[0px] translate-y-[10px] transition-transform ease-in-out duration-500;
+  }
+  .burger-menu.active .bar:nth-child(2) {
+    @apply opacity-0 transition-opacity ease-in-out duration-300;
+  }
+  .burger-menu.active .bar:nth-child(3) {
+    @apply transform -rotate-45 translate-x-[0px] -translate-y-[10px] transition-transform ease-in-out duration-500;
+  }
+  .bar {
+    @apply w-[30px] h-[2px] bg-color3 my-[4px];
+  }
+  .menu {
+    @apply hidden;
+  }
+  .menu.active {
+    @apply flex;
+  }
+}
+.custom-scrollbar {
+  overflow-y: auto;
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: #22283100 #22283100; /* For Firefox */
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px; /* For Chrome, Safari, and Opera */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #22283100; /* For Chrome, Safari, and Opera */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background-color: #eaeaea; /* For Chrome, Safari, and Opera */
+}
+
+.disable-select {
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none; /* Standard syntax */
+}

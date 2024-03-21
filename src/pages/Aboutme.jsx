@@ -57,7 +57,7 @@ export default function Aboutme() {
         onTouchMove={(e) => {
           if (grabbing) {
             const threshold = window.innerWidth / 4;
-            const deltaX = e.clientX - startX;
+            const deltaX = e.touches[0].clientX - startX;
             if (deltaX > threshold || deltaX < -threshold) {
               handleTouchEnd();
             }

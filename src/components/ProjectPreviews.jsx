@@ -48,6 +48,13 @@ export default function ProjectPreviews(images) {
           setGrabbing(true);
         }}
         onTouchMove={(e) => {
+          if (grabbing) {
+            const threshold = window.innerWidth / 4;
+            const deltaX = e.touches[0].clientX - startX;
+            if (deltaX > threshold || deltaX < -threshold) {
+              handleTouchEnd();
+            }
+          }
           setEndX(e.touches[0].clientX);
         }}
         onTouchEnd={handleTouchEnd}

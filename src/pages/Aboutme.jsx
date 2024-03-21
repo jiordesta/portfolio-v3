@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import Hero from "../components/aboutme/Hero";
 import Skills from "../components/aboutme/Skills";
@@ -13,10 +13,6 @@ export default function Aboutme() {
   const [startX, setStartX] = useState(0);
   const [endX, setEndX] = useState(0);
   const [grabbing, setGrabbing] = useState(false);
-
-  useEffect(() => {
-    console.log(section);
-  }, [section]);
 
   function handleTouchEnd() {
     if (grabbing) {
